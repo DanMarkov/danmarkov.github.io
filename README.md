@@ -1,2 +1,0 @@
-# VezGuevi
- My store diploma

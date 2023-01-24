@@ -28,33 +28,6 @@ function changeIcon() {
   }
 }
 
-// Testimonial Slide
-
-const testimonialSlide = new Swiper(".testimonial__wrapper", {
-  loop: true,
-  spaceBetween: 30,
-  centeredSlides: true,
-  effect: "coverflow",
-  grabCursor: true,
-  slidesPerView: 1,
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  breakpoints: {
-    520: {
-      slidesPerView: "auto",
-    },
-  },
-});
 
 // header scroll animation
 window.addEventListener("scroll", () => {

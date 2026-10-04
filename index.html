@@ -5,13 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Даниил Марков — frontend, экология, искусство</title>
+    <title>Даниил Марков — Мой компьютер</title>
     <meta name="description" content="Даниил Марков: junior frontend-разработчик, студент БГУ, автор проекта «Хомягочи». JavaScript, HTML, CSS, Linux, WordPress/WooCommerce.">
     <link rel="icon" href="assets/img/favicon_starry.gif" type="image/gif">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
-        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -47,31 +43,54 @@
         <!--=================== Hero ====================-->
         <section id="hero" class="hero">
             <div class="container">
-                <div class="hero__sun"></div>
-                <div class="hero__grid"></div>
                 <div class="hero__wrapper">
-                    <div class="hero__content">
-                        <p class="hero__tagline"><i class="ri-leaf-fill"></i> код <span class="hero__dot">/</span> экология <span class="hero__dot">/</span> искусство <span class="hero__dot">/</span> ｖａｐｏｒｗａｖｅ</p>
-                        <h1 class="hero__title">
-                            Привет, я <em>Даниил</em>.<br>
-                            Ｄａｒｉｎｇ Ｓｙｎｔｈ.<br>
-                            Делаю веб живым.
-                        </h1>
-                        <p class="hero__description">
-                            Junior frontend-разработчик, студент-менеджер и человек-оркестр из Иркутска.
-                            Самоучка — учусь по программе типа The Odin Project, за плечами 40+ репозиториев
-                            на GitHub. Запускаю проекты: от интернет-магазинов до социальных тамагочи.
-                        </p>
-                        <div class="hero__actions">
-                            <a href="#projects" class="btn btn--primary">Мои проекты <i class="ri-arrow-right-line"></i></a>
-                            <a href="https://github.com/DanMarkov" target="_blank" rel="noopener" class="btn btn--ghost"><i class="ri-github-fill"></i> GitHub</a>
+                    <div class="xp-window hero__content-window">
+                        <div class="xp-titlebar">
+                            <span class="xp-titlebar-icon"><i class="ri-user-smile-line"></i></span>
+                            Привет, я Даниил
+                            <div class="xp-titlebar-buttons">
+                                <span class="xp-titlebar-btn xp-titlebar-btn--min">—</span>
+                                <span class="xp-titlebar-btn xp-titlebar-btn--max">□</span>
+                                <span class="xp-titlebar-btn xp-titlebar-btn--close">✕</span>
+                            </div>
+                        </div>
+                        <div class="xp-menubar">
+                            <span><i class="ri-code-s-slash-line"></i> код</span>
+                            <span><i class="ri-leaf-line"></i> экология</span>
+                            <span><i class="ri-palette-line"></i> искусство</span>
+                        </div>
+                        <div class="xp-window-body">
+                            <div class="hero__content">
+                                <p class="hero__tagline"><i class="ri-award-line"></i> junior frontend-разработчик · Иркутск</p>
+                                <h1 class="hero__title">
+                                    Привет, я <em>Даниил</em>.<br>
+                                    Делаю веб живым.
+                                </h1>
+                                <p class="hero__description">
+                                    Самоучка — учусь по программе типа The Odin Project, за плечами 40+ репозиториев
+                                    на GitHub. Запускаю проекты: от интернет-магазинов до социальных тамагочи.
+                                </p>
+                                <div class="hero__actions">
+                                    <a href="#projects" class="btn btn--primary">Мои проекты <i class="ri-arrow-right-line"></i></a>
+                                    <a href="https://github.com/DanMarkov" target="_blank" rel="noopener" class="btn btn--ghost"><i class="ri-github-fill"></i> GitHub</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="hero__card">
+                    <div class="hero__card xp-window">
+                        <div class="xp-titlebar">
+                            <span class="xp-titlebar-icon"><i class="ri-image-line"></i></span>
+                            Моё_фото.jpeg
+                            <div class="xp-titlebar-buttons">
+                                <span class="xp-titlebar-btn xp-titlebar-btn--min">—</span>
+                                <span class="xp-titlebar-btn xp-titlebar-btn--max">□</span>
+                                <span class="xp-titlebar-btn xp-titlebar-btn--close">✕</span>
+                            </div>
+                        </div>
                         <img src="assets/img/Cool_me.jpeg" alt="Даниил Марков" class="hero__img">
                         <div class="hero__card-caption">
                             <span class="hero__card-name">Даниил Марков</span>
-                            <span class="hero__card-role">frontend · Иркутск · ａｅｓｔｈｅｔｉｃ</span>
+                            <span class="hero__card-role">frontend · БГУ · Иркутск</span>
                         </div>
                     </div>
                 </div>
@@ -122,7 +141,7 @@
                 <div class="about__facts">
                     <div class="about__fact"><span class="about__fact-value">40+</span><span class="about__fact-label">репозиториев на GitHub</span></div>
                     <div class="about__fact"><span class="about__fact-value">B2+</span><span class="about__fact-label">английский (+ французский)</span></div>
-                    <div class="about__fact"><span class="about__fact-value">2026</span><span class="about__fact-label">4-е место на «Зелёный свет», Москва</span></div>
+                    <div class="about__fact"><span class="about__fact-value">4-е</span><span class="about__fact-label">место на «Зелёном свете», Москва 2026</span></div>
                 </div>
             </div>
         </section>
@@ -195,10 +214,9 @@
                         <h3 class="project__title">«Хомягочи»</h3>
                         <p class="project__description">
                             Интерактивный тамагочи для развития цифровой грамотности.
-                            Автор и руководитель проекта. 4-е место на конкурсе
-                            «Зелёный свет» в Москве (июль 2026).
+                            Автор и руководитель проекта.
                         </p>
-                        <span class="project__award"><i class="ri-award-line"></i> 4-е место · «Зелёный свет» · Москва 2026</span>
+                        <span class="project__award"><i class="ri-award-line"></i> 4-е место · «Зелёный свет» · Москва, июль 2026</span>
                     </article>
                 </div>
             </div>
@@ -319,23 +337,23 @@
         </section>
     </main>
 
-    <!--=================== Footer ====================-->
+    <!--=================== Footer (XP taskbar) ====================-->
     <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer__wrapper">
-                <div class="footer__content">
-                    <h4 class="footer__title">Написать мне</h4>
-                    <a href="mailto:danmark@skiff.com" class="footer__contact"><i class="ri-mail-line"></i> danmark@skiff.com</a>
-                </div>
-                <div class="footer__content">
-                    <h4 class="footer__title">Я в сети</h4>
-                    <a href="https://github.com/DanMarkov" target="_blank" rel="noopener" class="footer__contact">
-                        <i class="ri-github-fill"></i> GitHub · DanMarkov
-                    </a>
-                </div>
+        <div class="footer__wrapper">
+            <div class="footer__content footer__content--start">
+                <h4 class="footer__title"><i class="ri-windows-line"></i> Пуск</h4>
             </div>
-            <p class="footer__copyright">© 2026 Даниил Марков · сделано с <i class="ri-leaf-fill"></i> и Linux · ｖａｐｏｒｗａｖｅ ａｅｓｔｈｅｔｉｃ</p>
+            <div class="footer__content">
+                <a href="mailto:danmark@skiff.com" class="footer__contact"><i class="ri-mail-line"></i> danmark@skiff.com</a>
+            </div>
+            <div class="footer__content">
+                <a href="https://github.com/DanMarkov" target="_blank" rel="noopener" class="footer__contact">
+                    <i class="ri-github-fill"></i> GitHub
+                </a>
+            </div>
+            <span class="footer__clock" id="footer-clock"><i class="ri-time-line"></i> 00:00</span>
         </div>
+        <p class="footer__copyright">© 2026 Даниил Марков</p>
     </footer>
 
     <!--=================== ScrollReveal ==================-->

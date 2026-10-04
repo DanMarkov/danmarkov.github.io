@@ -28,6 +28,21 @@ function changeIcon() {
   }
 }
 
+// taskbar clock
+const footerClock = document.getElementById("footer-clock");
+
+function updateClock() {
+  if (!footerClock) return;
+  const now = new Date();
+  const hh = String(now.getHours()).padStart(2, "0");
+  const mm = String(now.getMinutes()).padStart(2, "0");
+  footerClock.innerHTML =
+    '<i class="ri-time-line"></i> ' + hh + ":" + mm;
+}
+
+updateClock();
+setInterval(updateClock, 30000);
+
 // header scroll animation
 window.addEventListener("scroll", () => {
   if (window.scrollY > 40) {

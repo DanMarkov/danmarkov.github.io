@@ -1071,3 +1071,70 @@ h4 {
     text-align: left;
   }
 }
+
+/* Draggable windows
+--------------------------------------------------------------*/
+.xp-titlebar {
+  cursor: default;
+  user-select: none;
+  touch-action: none;
+}
+
+.xp-window--dragging {
+  opacity: 0.92;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.xp-titlebar-btn,
+.xp-menubar {
+  touch-action: auto;
+}
+
+/* BSOD easter egg
+--------------------------------------------------------------*/
+.bsod {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: none;
+  padding: 8vh 10vw;
+  background: #0000aa;
+  color: #fff;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  line-height: 1.6;
+  cursor: pointer;
+  overflow: auto;
+}
+
+.bsod--visible {
+  display: block;
+}
+
+.bsod__face {
+  display: inline-block;
+  margin-bottom: 3rem;
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 1;
+  color: #dfe6f5;
+  background: #0000aa;
+}
+
+.bsod p {
+  margin: 0 0 1.6rem;
+}
+
+.bsod__footer {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.bsod__blink {
+  animation: bsod-blink 1s steps(1) infinite;
+}
+
+@keyframes bsod-blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -28,7 +28,6 @@ function changeIcon() {
   }
 }
 
-
 // header scroll animation
 window.addEventListener("scroll", () => {
   if (window.scrollY > 40) {
@@ -39,26 +38,22 @@ window.addEventListener("scroll", () => {
 });
 
 // ScrollReveal animations
-const sr = ScrollReveal({
-  duration: 2000,
-  distance: "100px",
-  delay: 400,
-  reset: false,
-});
+if (typeof ScrollReveal !== "undefined") {
+  const sr = ScrollReveal({
+    duration: 1000,
+    distance: "40px",
+    delay: 200,
+    reset: false,
+    easing: "cubic-bezier(0.645, 0.045, 0.355, 1)",
+  });
 
-sr.reveal(".hero__content, .about__content");
-sr.reveal(".hero__img", { origin: "top" });
+  sr.reveal(".hero__content");
+  sr.reveal(".hero__card", { origin: "right", delay: 350 });
 
-sr.reveal(
-  ".hero__info-wrapper, .skills__title, .skills__content, .qualification__name, .qualification__item, .project__content, .footer__content",
-  {
-    delay: 500,
-    interval: 100,
-  }
-);
-
-sr.reveal(".qualification__footer-text", {
-  origin: "left",
-});
-
-sr.reveal(".qualification__footer .btn", { origin: "right" });
+  sr.reveal(
+    ".about__card, .about__fact, .skills__group, .project__card, .science__item, .experience__item, .achievements__card, .interests__block, .footer__content",
+    {
+      interval: 120,
+    }
+  );
+}

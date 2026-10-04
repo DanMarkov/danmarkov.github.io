@@ -5,93 +5,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Даниил Марков — Мой компьютер</title>
+    <title>Даниил Марков — frontend · экология · искусство</title>
     <meta name="description" content="Даниил Марков: junior frontend-разработчик, студент БГУ, автор проекта «Хомягочи». JavaScript, HTML, CSS, Linux, WordPress/WooCommerce.">
     <link rel="icon" href="assets/img/favicon_starry.gif" type="image/gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
 
-    <!--=================== Header ====================-->
-    <header id="header" class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="#hero" class="nav__brand">
-                    <span class="nav__brand-mark">DM</span>Даниил Марков
-                </a>
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#hero" class="nav__link">Начало</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">Кто я</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Навыки</a></li>
-                        <li class="nav__item"><a href="#projects" class="nav__link">Проекты</a></li>
-                        <li class="nav__item"><a href="#science" class="nav__link">Наука</a></li>
-                        <li class="nav__item"><a href="#experience" class="nav__link">Опыт</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="nav__toggle">
-                    <i id="nav-toggle" class="ri-menu-3-line"></i>
-                </div>
-            </nav>
+    <!--=================== Topbar (GNOME) ====================-->
+    <header class="topbar" id="topbar">
+        <div class="topbar__side topbar__side--left">
+            <a href="#home" class="topbar__btn" title="Наверх"><i class="ri-apps-2-line"></i> Активности</a>
+        </div>
+        <button class="topbar__clock" id="topbar-clock" title="Календарь">--:--</button>
+        <div class="topbar__side topbar__side--right">
+            <button class="topbar__btn" id="theme-toggle" title="Сменить тему"><i class="ri-moon-line"></i></button>
+            <a href="https://github.com/DanMarkov" target="_blank" rel="noopener" class="topbar__btn" title="GitHub"><i
+                    class="ri-github-fill"></i></a>
         </div>
     </header>
 
     <main class="main">
         <!--=================== Hero ====================-->
-        <section id="hero" class="hero">
-            <div class="container">
-                <div class="hero__wrapper">
-                    <div class="xp-window xp-window--draggable hero__content-window">
-                        <div class="xp-titlebar">
-                            <span class="xp-titlebar-icon"><i class="ri-user-smile-line"></i></span>
-                            Привет, я Даниил
-                            <div class="xp-titlebar-buttons">
-                                <span class="xp-titlebar-btn xp-titlebar-btn--min">—</span>
-                                <span class="xp-titlebar-btn xp-titlebar-btn--max">□</span>
-                                <span class="xp-titlebar-btn xp-titlebar-btn--close">✕</span>
-                            </div>
+        <section id="home" class="hero">
+            <div class="container hero__grid">
+                <div class="window window--draggable" id="hero-window">
+                    <div class="window__titlebar">
+                        <div class="traffic-lights">
+                            <button class="traffic-light traffic-light--close" data-action="close" title="Закрыть"><i
+                                    class="ri-close-line"></i></button>
+                            <button class="traffic-light traffic-light--min" data-action="min" title="Свернуть"><i
+                                    class="ri-subtract-line"></i></button>
+                            <button class="traffic-light traffic-light--max" data-action="max" title="Развернуть"><i
+                                    class="ri-expand-diagonal-line"></i></button>
                         </div>
-                        <div class="xp-menubar">
-                            <span><i class="ri-code-s-slash-line"></i> код</span>
-                            <span><i class="ri-leaf-line"></i> экология</span>
-                            <span><i class="ri-palette-line"></i> искусство</span>
-                        </div>
-                        <div class="xp-window-body">
-                            <div class="hero__content">
-                                <p class="hero__tagline"><i class="ri-award-line"></i> junior frontend-разработчик · Иркутск</p>
-                                <h1 class="hero__title">
-                                    Привет, я <em>Даниил</em>.<br>
-                                    Делаю веб живым.
-                                </h1>
-                                <p class="hero__description">
-                                    Самоучка — учусь по программе типа The Odin Project, за плечами 40+ репозиториев
-                                    на GitHub. Запускаю проекты: от интернет-магазинов до социальных тамагочи.
-                                </p>
-                                <div class="hero__actions">
-                                    <a href="#projects" class="btn btn--primary">Мои проекты <i class="ri-arrow-right-line"></i></a>
-                                    <a href="https://github.com/DanMarkov" target="_blank" rel="noopener" class="btn btn--ghost"><i class="ri-github-fill"></i> GitHub</a>
-                                </div>
-                            </div>
+                        <span class="window__title">Даниил Марков — Добро пожаловать</span>
+                    </div>
+                    <div class="window__body">
+                        <p class="hero__tagline"><i class="ri-leaf-fill"></i> код / экология / искусство / Arch Linux</p>
+                        <h1 class="hero__title">
+                            Привет, я <em>Даниил</em>.<br>
+                            Делаю веб живым.
+                        </h1>
+                        <p class="hero__description">
+                            Junior frontend-разработчик, студент-менеджер и человек-оркестр из Иркутска.
+                            Самоучка — учусь по программе типа The Odin Project, за плечами 40+ репозиториев
+                            на GitHub. Запускаю проекты: от интернет-магазинов до социальных тамагочи.
+                        </p>
+                        <div class="hero__actions">
+                            <a href="#projects" class="btn btn--primary">Мои проекты <i class="ri-arrow-right-line"></i></a>
+                            <a href="https://github.com/DanMarkov" target="_blank" rel="noopener" class="btn btn--secondary"><i
+                                    class="ri-github-fill"></i> GitHub</a>
                         </div>
                     </div>
-                    <div class="hero__card xp-window xp-window--draggable">
-                        <div class="xp-titlebar">
-                            <span class="xp-titlebar-icon"><i class="ri-image-line"></i></span>
-                            Моё_фото.jpeg
-                            <div class="xp-titlebar-buttons">
-                                <span class="xp-titlebar-btn xp-titlebar-btn--min">—</span>
-                                <span class="xp-titlebar-btn xp-titlebar-btn--max">□</span>
-                                <span class="xp-titlebar-btn xp-titlebar-btn--close">✕</span>
+                </div>
+
+                <div class="hero__side">
+                    <div class="window window--draggable" id="photo-window">
+                        <div class="window__titlebar">
+                            <div class="traffic-lights">
+                                <button class="traffic-light traffic-light--close" data-action="close" title="Закрыть"><i
+                                        class="ri-close-line"></i></button>
+                                <button class="traffic-light traffic-light--min" data-action="min" title="Свернуть"><i
+                                        class="ri-subtract-line"></i></button>
+                                <button class="traffic-light traffic-light--max" data-action="max" title="Развернуть"><i
+                                        class="ri-expand-diagonal-line"></i></button>
                             </div>
+                            <span class="window__title">Моё_фото.jpeg</span>
                         </div>
                         <img src="assets/img/Cool_me.jpeg" alt="Даниил Марков" class="hero__img">
-                        <div class="hero__card-caption">
-                            <span class="hero__card-name">Даниил Марков</span>
-                            <span class="hero__card-role">frontend · БГУ · Иркутск</span>
+                    </div>
+
+                    <div class="window window--terminal" id="terminal-window">
+                        <div class="window__titlebar">
+                            <div class="traffic-lights">
+                                <button class="traffic-light traffic-light--close" data-action="close" title="Закрыть"><i
+                                        class="ri-close-line"></i></button>
+                                <button class="traffic-light traffic-light--min" data-action="min" title="Свернуть"><i
+                                        class="ri-subtract-line"></i></button>
+                            </div>
+                            <span class="window__title">danil@irkutsk: ~</span>
                         </div>
+                        <div class="terminal__body" id="terminal-body"></div>
                     </div>
                 </div>
             </div>
@@ -105,43 +106,43 @@
                     <span class="section__subtitle">frontend · менеджмент · сцена</span>
                 </div>
                 <div class="about__grid">
-                    <article class="about__card">
-                        <i class="ri-code-s-slash-line about__icon"></i>
-                        <h3 class="about__card-title">Разработчик-самоучка</h3>
-                        <p class="about__card-text">
+                    <article class="card about__card">
+                        <i class="ri-code-s-slash-line card__icon"></i>
+                        <h3 class="card__title">Разработчик-самоучка</h3>
+                        <p class="card__text">
                             Иду по пути типа The Odin Project, за спиной — 40+ репозиториев на GitHub.
                             Уверенный junior по фронтенду: JavaScript, HTML, CSS, Git.
                         </p>
                     </article>
-                    <article class="about__card">
-                        <i class="ri-graduation-cap-line about__icon"></i>
-                        <h3 class="about__card-title">Студент БГУ</h3>
-                        <p class="about__card-text">
+                    <article class="card about__card">
+                        <i class="ri-graduation-cap-line card__icon card__icon--green"></i>
+                        <h3 class="card__title">Студент БГУ</h3>
+                        <p class="card__text">
                             Байкальский государственный университет (Иркутск), «Менеджмент»,
                             профиль «Управление бизнесом».
                         </p>
                     </article>
-                    <article class="about__card">
-                        <i class="ri-terminal-box-line about__icon"></i>
-                        <h3 class="about__card-title">Linux и хостинг</h3>
-                        <p class="about__card-text">
+                    <article class="card about__card">
+                        <i class="ri-terminal-box-line card__icon"></i>
+                        <h3 class="card__title">Linux и хостинг</h3>
+                        <p class="card__text">
                             Уверенный пользователь Linux, самостоятельно хостил свои приложения —
                             от WordPress до WooCommerce-магазинов.
                         </p>
                     </article>
-                    <article class="about__card">
-                        <i class="ri-mic-2-line about__icon"></i>
-                        <h3 class="about__card-title">Человек сцены</h3>
-                        <p class="about__card-text">
+                    <article class="card about__card">
+                        <i class="ri-mic-2-line card__icon card__icon--green"></i>
+                        <h3 class="card__title">Человек сцены</h3>
+                        <p class="card__text">
                             Актёр пластического спектакля, натурщик, перформер. Люблю современное
                             искусство, контактную импровизацию и танцы.
                         </p>
                     </article>
                 </div>
                 <div class="about__facts">
-                    <div class="about__fact"><span class="about__fact-value">40+</span><span class="about__fact-label">репозиториев на GitHub</span></div>
-                    <div class="about__fact"><span class="about__fact-value">B2+</span><span class="about__fact-label">английский (+ французский)</span></div>
-                    <div class="about__fact"><span class="about__fact-value">4-е</span><span class="about__fact-label">место на «Зелёном свете», Москва 2026</span></div>
+                    <div class="fact"><span class="fact__value">40+</span><span class="fact__label">репозиториев на GitHub</span></div>
+                    <div class="fact"><span class="fact__value">B2+</span><span class="fact__label">английский (+ французский)</span></div>
+                    <div class="fact"><span class="fact__value">4-е</span><span class="fact__label">место на «Зелёном свете», Москва 2026</span></div>
                 </div>
             </div>
         </section>
@@ -154,8 +155,8 @@
                     <span class="section__subtitle">инструменты, с которыми работаю</span>
                 </div>
                 <div class="skills__grid">
-                    <div class="skills__group">
-                        <h3 class="skills__name"><i class="ri-layout-masonry-fill"></i> Frontend</h3>
+                    <div class="card skills__group">
+                        <h3 class="card__title"><i class="ri-layout-masonry-fill"></i> Frontend</h3>
                         <ul class="tags">
                             <li class="tag">JavaScript</li>
                             <li class="tag">HTML</li>
@@ -163,8 +164,8 @@
                             <li class="tag">Git</li>
                         </ul>
                     </div>
-                    <div class="skills__group">
-                        <h3 class="skills__name"><i class="ri-server-line"></i> Linux и хостинг</h3>
+                    <div class="card skills__group">
+                        <h3 class="card__title"><i class="ri-server-line"></i> Linux и хостинг</h3>
                         <ul class="tags">
                             <li class="tag">Linux</li>
                             <li class="tag">Self-hosting</li>
@@ -172,15 +173,15 @@
                             <li class="tag">WooCommerce</li>
                         </ul>
                     </div>
-                    <div class="skills__group">
-                        <h3 class="skills__name"><i class="ri-briefcase-4-line"></i> Софт и деловые инструменты</h3>
+                    <div class="card skills__group">
+                        <h3 class="card__title"><i class="ri-briefcase-4-line"></i> Софт и деловые инструменты</h3>
                         <ul class="tags">
                             <li class="tag">MS Office</li>
                             <li class="tag">КонсультантПлюс</li>
                         </ul>
                     </div>
-                    <div class="skills__group">
-                        <h3 class="skills__name"><i class="ri-quill-pen-line"></i> Текст и медиа</h3>
+                    <div class="card skills__group">
+                        <h3 class="card__title"><i class="ri-quill-pen-line"></i> Текст и медиа</h3>
                         <ul class="tags">
                             <li class="tag">Копирайтинг</li>
                             <li class="tag">SMM</li>
@@ -198,10 +199,10 @@
                     <span class="section__subtitle">делаю и довожу до продакшена</span>
                 </div>
                 <div class="projects__grid">
-                    <article class="project__card">
-                        <div class="project__badge"><i class="ri-shopping-bag-3-line"></i> WooCommerce</div>
-                        <h3 class="project__title">Gachapon.space</h3>
-                        <p class="project__description">
+                    <article class="card project__card">
+                        <div class="badge"><i class="ri-shopping-bag-3-line"></i> WooCommerce</div>
+                        <h3 class="card__title">Gachapon.space</h3>
+                        <p class="card__text">
                             Интернет-магазин на WordPress/WooCommerce. Развёрнут и захостен
                             самостоятельно: от установки до настройки и запуска.
                         </p>
@@ -209,10 +210,10 @@
                             Открыть магазин <i class="ri-arrow-right-up-line"></i>
                         </a>
                     </article>
-                    <article class="project__card project__card--accent">
-                        <div class="project__badge"><i class="ri-gamepad-line"></i> Социальный проект</div>
-                        <h3 class="project__title">«Хомягочи»</h3>
-                        <p class="project__description">
+                    <article class="card project__card project__card--accent">
+                        <div class="badge badge--green"><i class="ri-gamepad-line"></i> Социальный проект</div>
+                        <h3 class="card__title">«Хомягочи»</h3>
+                        <p class="card__text">
                             Интерактивный тамагочи для развития цифровой грамотности.
                             Автор и руководитель проекта.
                         </p>
@@ -230,25 +231,25 @@
                     <span class="section__subtitle">конкурсы, доклады, статьи</span>
                 </div>
                 <div class="science__list">
-                    <article class="science__item">
+                    <article class="card science__item">
                         <span class="science__year">2025</span>
-                        <div class="science__body">
-                            <h3 class="science__title">«Информационная культура и информационная безопасность»</h3>
-                            <p class="science__description">Диплом II степени III Международного конкурса «Родина: общество и приоритеты».</p>
+                        <div>
+                            <h3 class="card__title">«Информационная культура и информационная безопасность»</h3>
+                            <p class="card__text">Диплом II степени III Международного конкурса «Родина: общество и приоритеты».</p>
                         </div>
                     </article>
-                    <article class="science__item">
+                    <article class="card science__item">
                         <span class="science__year">2026</span>
-                        <div class="science__body">
-                            <h3 class="science__title">«Правовое регулирование управленческой деятельности в некоммерческих организациях»</h3>
-                            <p class="science__description">Доклад на VIII Всероссийской НПК и публикация по итогам конференции.</p>
+                        <div>
+                            <h3 class="card__title">«Правовое регулирование управленческой деятельности в некоммерческих организациях»</h3>
+                            <p class="card__text">Доклад на VIII Всероссийской НПК и публикация по итогам конференции.</p>
                         </div>
                     </article>
-                    <article class="science__item">
+                    <article class="card science__item">
                         <span class="science__year">2026</span>
-                        <div class="science__body">
-                            <h3 class="science__title">«Иркутск — город трудовой доблести»</h3>
-                            <p class="science__description">V Всероссийский конкурс «Россия: новое поколение и знание».</p>
+                        <div>
+                            <h3 class="card__title">«Иркутск — город трудовой доблести»</h3>
+                            <p class="card__text">V Всероссийский конкурс «Россия: новое поколение и знание».</p>
                         </div>
                     </article>
                 </div>
@@ -265,42 +266,42 @@
                 <div class="experience__timeline">
                     <article class="experience__item">
                         <span class="experience__dot"></span>
-                        <div class="experience__body">
-                            <h3 class="experience__title">Копирайтер и SMM · волонтёрские организации Иркутска</h3>
-                            <p class="experience__description">
+                        <div class="card experience__body">
+                            <h3 class="card__title">Копирайтер и SMM · волонтёрские организации Иркутска</h3>
+                            <p class="card__text">
                                 Экологическое волонтёрство и ППОС БГУ. Благодарственные письма 2025–2026.
                             </p>
-                            <span class="experience__date">2025 — 2026</span>
+                            <span class="pill">2025 — 2026</span>
                         </div>
                     </article>
                     <article class="experience__item">
                         <span class="experience__dot"></span>
-                        <div class="experience__body">
-                            <h3 class="experience__title">Аниматор · санаторий «Россия», Белокуриха</h3>
-                            <p class="experience__description">Летний сезон работы с гостями санатория.</p>
-                            <span class="experience__date">лето 2026</span>
+                        <div class="card experience__body">
+                            <h3 class="card__title">Аниматор · санаторий «Россия», Белокуриха</h3>
+                            <p class="card__text">Летний сезон работы с гостями санатория.</p>
+                            <span class="pill">лето 2026</span>
                         </div>
                     </article>
                     <article class="experience__item">
                         <span class="experience__dot"></span>
-                        <div class="experience__body">
-                            <h3 class="experience__title">Актёр · «Старуха Изергиль», Маленький злой театр</h3>
-                            <p class="experience__description">
+                        <div class="card experience__body">
+                            <h3 class="card__title">Актёр · «Старуха Изергиль», Маленький злой театр</h3>
+                            <p class="card__text">
                                 Пластический спектакль, роль Данко (2026). Также — натурщик для художников и перформансы.
                             </p>
-                            <span class="experience__date">2026</span>
+                            <span class="pill">2026</span>
                         </div>
                     </article>
                 </div>
 
                 <div class="achievements">
-                    <h3 class="achievements__title">Достижения</h3>
+                    <h3 class="section__title section__title--small">Достижения</h3>
                     <div class="achievements__grid">
-                        <div class="achievements__card">
+                        <div class="card achievements__card">
                             <i class="ri-megaphone-line"></i>
                             <p>Грамота ИРНИТУ за конкурс ораторского мастерства на английском TED talks «Inventions That Changed Lives» (2026)</p>
                         </div>
-                        <div class="achievements__card">
+                        <div class="card achievements__card">
                             <i class="ri-hand-heart-line"></i>
                             <p>Сертификат «Альфа-Менторство» Альфа-Банка в роли менти (2026)</p>
                         </div>
@@ -313,23 +314,23 @@
         <section id="interests" class="section interests">
             <div class="container">
                 <div class="interests__grid">
-                    <div class="interests__block">
-                        <h3 class="interests__heading"><i class="ri-translate-2"></i> Языки</h3>
+                    <div class="card interests__block">
+                        <h3 class="card__title"><i class="ri-translate-2"></i> Языки</h3>
                         <ul class="languages">
                             <li class="languages__item"><span>Русский</span><em>родной</em></li>
                             <li class="languages__item"><span>English</span><em>B2+</em></li>
                             <li class="languages__item"><span>Français</span><em>учу</em></li>
                         </ul>
                     </div>
-                    <div class="interests__block interests__block--accent">
-                        <h3 class="interests__heading"><i class="ri-heart-3-line"></i> Интересы</h3>
+                    <div class="card interests__block interests__block--accent">
+                        <h3 class="card__title"><i class="ri-heart-3-line"></i> Интересы</h3>
                         <ul class="tags">
-                            <li class="tag tag--light">Экология</li>
-                            <li class="tag tag--light">Open-source</li>
-                            <li class="tag tag--light">Современное искусство</li>
-                            <li class="tag tag--light">Перформанс</li>
-                            <li class="tag tag--light">Контактная импровизация</li>
-                            <li class="tag tag--light">Танцы</li>
+                            <li class="tag">Экология</li>
+                            <li class="tag">Open-source</li>
+                            <li class="tag">Современное искусство</li>
+                            <li class="tag">Перформанс</li>
+                            <li class="tag">Контактная импровизация</li>
+                            <li class="tag">Танцы</li>
                         </ul>
                     </div>
                 </div>
@@ -337,37 +338,49 @@
         </section>
     </main>
 
-    <!--=================== Footer (XP taskbar) ====================-->
+    <!--=================== Footer ====================-->
     <footer id="contact" class="footer">
-        <div class="footer__wrapper">
-            <div class="footer__content footer__content--start">
-                <h4 class="footer__title"><i class="ri-windows-line"></i> Пуск</h4>
-            </div>
-            <div class="footer__content">
+        <div class="container footer__grid">
+            <div>
+                <h4 class="footer__title">Написать мне</h4>
                 <a href="mailto:danmark@skiff.com" class="footer__contact"><i class="ri-mail-line"></i> danmark@skiff.com</a>
             </div>
-            <div class="footer__content">
-                <a href="https://github.com/DanMarkov" target="_blank" rel="noopener" class="footer__contact">
-                    <i class="ri-github-fill"></i> GitHub
-                </a>
+            <div>
+                <h4 class="footer__title">Я в сети</h4>
+                <a href="https://github.com/DanMarkov" target="_blank" rel="noopener" class="footer__contact"><i
+                        class="ri-github-fill"></i> GitHub · DanMarkov</a>
             </div>
-            <span class="footer__clock" id="footer-clock"><i class="ri-time-line"></i> 00:00</span>
+            <p class="footer__copyright">© 2026 Даниил Марков · собрано на Arch Linux с любовью</p>
         </div>
-        <p class="footer__copyright">© 2026 Даниил Марков</p>
     </footer>
 
-    <!--=================== BSOD easter egg ====================-->
-    <div class="bsod" id="bsod" role="dialog" aria-label="Пасхалка: синий экран">
-        <span class="bsod__face">:(</span>
-        <p>На вашем портфолио возникла проблема, и его придётся перезапустить. Собираем информацию об ошибке, а потом автоматически выполним перезапуск.</p>
-        <p id="bsod-progress">Выполнено: 0%</p>
-        <div class="bsod__footer">
-            <p>Если вы позвоните в службу поддержки, сообщите им эти данные:</p>
-            <p>Стоп-код: <strong>DAN_MARKOV_ДЫРЯВОМЕТР</strong></p>
-            <p>Сбойный модуль: <strong>danmarkov.exe — Делаю веб живым</strong></p>
-            <p class="bsod__blink">Нажмите в любом месте, чтобы вернуться на сайт</p>
-        </div>
-    </div>
+    <!--=================== Dock (macOS) ====================-->
+    <nav class="dock" aria-label="Быстрая навигация">
+        <button class="dock__item" data-section="home" title="Начало"><i class="ri-home-4-line"></i></button>
+        <button class="dock__item" data-section="about" title="Кто я"><i class="ri-user-smile-line"></i></button>
+        <button class="dock__item" data-section="skills" title="Навыки"><i class="ri-terminal-line"></i></button>
+        <button class="dock__item" data-section="projects" title="Проекты"><i class="ri-folder-3-line"></i></button>
+        <button class="dock__item" data-section="science" title="Наука"><i class="ri-book-2-line"></i></button>
+        <button class="dock__item" data-section="experience" title="Опыт"><i class="ri-briefcase-4-line"></i></button>
+        <button class="dock__item" data-section="interests" title="Интересы"><i class="ri-heart-3-line"></i></button>
+        <button class="dock__item" data-section="contact" title="Контакты"><i class="ri-mail-line"></i></button>
+        <span class="dock__separator"></span>
+        <button class="dock__item dock__item--arch" id="arch-logo" title="I use Arch, btw">
+            <svg viewBox="0 0 256 256" width="30" height="30" aria-label="Arch Linux">
+                <defs>
+                    <linearGradient id="arch-gradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#1793D1" />
+                        <stop offset="1" stop-color="#0d5f8a" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#arch-gradient)"
+                    d="M128 8c-6 18-11 31-19 46 6 11 13 24 19 36 6-12 13-25 19-36-8-15-13-28-19-46zm0 100c-6 12-13 25-19 36 6 11 12 23 19 34 7-11 13-23 19-34-6-11-13-24-19-36zm-38 74c6 11 13 23 19 34h-32c-5 12-9 21-13 28h32c4-7 8-16 13-28h38c5 12 9 21 13 28h32c-4-7-8-16-13-28h-32c6-11 13-23 19-34-5-9-11-20-19-34-8 14-14 25-19 34z" />
+            </svg>
+        </button>
+    </nav>
+
+    <!--=================== Toast ====================-->
+    <div class="toast" id="toast" role="status"></div>
 
     <!--=================== ScrollReveal ==================-->
     <script src="https://unpkg.com/scrollreveal"></script>

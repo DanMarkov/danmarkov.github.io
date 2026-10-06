@@ -504,6 +504,22 @@ button {
   color: #f6d32d;
 }
 
+.terminal__input {
+  outline: none;
+  min-width: 0.5rem;
+  caret-color: transparent;
+}
+
+.terminal__input-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.terminal__input-line .terminal__cursor {
+  display: inline-block;
+}
+
 .terminal__cursor {
   display: inline-block;
   width: 0.75em;

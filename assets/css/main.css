@@ -257,6 +257,40 @@ button {
   cursor: grab;
 }
 
+.window__resize {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: nwse-resize;
+  touch-action: none;
+  z-index: 5;
+}
+
+.window__resize::after {
+  content: "";
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-right: 2px solid var(--text-dim);
+  border-bottom: 2px solid var(--text-dim);
+  border-bottom-right-radius: 0.3rem;
+  opacity: 0.45;
+  transition: var(--transition);
+}
+
+.window__resize:hover::after {
+  opacity: 1;
+}
+
+.window--resizing {
+  cursor: nwse-resize;
+  user-select: none;
+}
+
 .window--dragging .window__titlebar {
   cursor: grabbing;
 }

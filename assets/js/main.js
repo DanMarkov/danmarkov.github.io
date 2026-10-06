@@ -113,6 +113,57 @@ document.querySelectorAll(".window--draggable").forEach((win) => {
   document.addEventListener("touchend", onUp);
 });
 
+/* Resizable windows (bottom-right corner handle) */
+document.querySelectorAll(".window__resize").forEach((handle) => {
+  const win = handle.closest(".window");
+  if (!win) return;
+  const MIN_W = 280;
+  const MIN_H = 180;
+  let resizing = false;
+  let startX = 0;
+  let startY = 0;
+  let startW = 0;
+  let startH = 0;
+
+  function onDown(e) {
+    resizing = true;
+    win.classList.add("window--resizing");
+    const point = e.touches ? e.touches[0] : e;
+    startX = point.clientX;
+    startY = point.clientY;
+    const rect = win.getBoundingClientRect();
+    startW = rect.width;
+    startH = rect.height;
+    win.style.width = startW + "px";
+    e.preventDefault();
+  }
+
+  function onMove(e) {
+    if (!resizing) return;
+    const point = e.touches ? e.touches[0] : e;
+    const maxW = Math.max(MIN_W, window.innerWidth - 16);
+    const maxH = Math.max(MIN_H, window.innerHeight - 60);
+    const w = Math.min(Math.max(startW + (point.clientX - startX), MIN_W), maxW);
+    const h = Math.min(Math.max(startH + (point.clientY - startY), MIN_H), maxH);
+    win.style.width = w + "px";
+    win.style.height = h + "px";
+    if (e.cancelable) e.preventDefault();
+  }
+
+  function onUp() {
+    if (!resizing) return;
+    resizing = false;
+    win.classList.remove("window--resizing");
+  }
+
+  handle.addEventListener("mousedown", onDown);
+  handle.addEventListener("touchstart", onDown, { passive: false });
+  document.addEventListener("mousemove", onMove);
+  document.addEventListener("touchmove", onMove, { passive: false });
+  document.addEventListener("mouseup", onUp);
+  document.addEventListener("touchend", onUp);
+});
+
 /* Traffic lights: minimize / close / maximize */
 document.querySelectorAll(".traffic-light").forEach((btn) => {
   btn.addEventListener("click", (e) => {

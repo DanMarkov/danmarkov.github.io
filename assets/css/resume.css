@@ -1,0 +1,45 @@
+/* Resume page extras */
+
+.hero--resume {
+  min-height: 100vh;
+}
+
+.about__grid--why {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.why .card__icon {
+  background: rgba(145, 65, 172, 0.14);
+  color: var(--purple);
+}
+
+.why .card__icon--green {
+  background: rgba(46, 194, 126, 0.14);
+  color: var(--green);
+}
+
+.contact {
+  padding-bottom: 16rem;
+}
+
+.contact__card {
+  text-align: center;
+  padding: 4.5rem 3rem;
+}
+
+.contact__card .hero__actions {
+  justify-content: center;
+  margin-top: 2.6rem;
+}
+
+.contact__text {
+  max-width: 62rem;
+  margin: 0 auto;
+  font-size: var(--fs-md);
+}
+
+@media (max-width: 900px) {
+  .about__grid--why {
+    grid-template-columns: 1fr;
+  }
+}

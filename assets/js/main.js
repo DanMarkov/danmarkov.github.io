@@ -271,7 +271,7 @@ function typeTerminal() {
 
 const terminalWindow = document.getElementById("terminal-window");
 
-if (terminalWindow) {
+if (terminalWindow && !document.querySelector("script[src*='resume.js']")) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {

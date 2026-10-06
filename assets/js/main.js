@@ -215,17 +215,15 @@ const ARCH_LOGO = [
 ];
 
 const NEOFETCH_LINES = [
-  { text: "danil@irkutsk", cls: "t-green", delay: 100 },
-  { text: "----------------", cls: "t-green", delay: 100 },
-  { text: "OS: Arch Linux x86_64 (btw)", cls: "", delay: 120 },
-  { text: "Host: Даниил Марков — БГУ, Иркутск", cls: "", delay: 120 },
-  { text: "Kernel: суперактивный-студент 40+.repo", cls: "", delay: 120 },
-  { text: "Shell: человек-оркестр (БГУ × проекты × сцена)", cls: "", delay: 120 },
-  { text: "DE: macOS × GNOME (лучшее из двух)", cls: "t-blue", delay: 120 },
-  { text: "Uptime: с первого «Hello, World»", cls: "", delay: 120 },
-  { text: "Packages: JS, HTML, CSS, Git, Linux", cls: "", delay: 120 },
-  { text: "Resolution: экология × искусство", cls: "", delay: 120 },
-  { text: "Memory: БГУ «Менеджмент» + сцена", cls: "t-yellow", delay: 120 },
+  { text: "danil@bsu", cls: "t-green", delay: 100 },
+  { text: "-------------", cls: "t-green", delay: 100 },
+  { text: "OS: медиаспециалист, БГУ (btw)", cls: "", delay: 130 },
+  { text: "Кафедра: менеджмента, маркетинга и логистики", cls: "", delay: 130 },
+  { text: "Роль: копирайтер · SMM · автор проектов", cls: "t-blue", delay: 130 },
+  { text: "Кейс: «Хомягочи» — 4-е место, «Зелёный свет»", cls: "t-yellow", delay: 130 },
+  { text: "Языки: русский · English B2+ · français", cls: "", delay: 130 },
+  { text: "Цель: команда БГУ на «ЯрпИР» и «Лучник»", cls: "t-green", delay: 130 },
+  { text: "Uptime: идея → команда → финал → результат", cls: "", delay: 130 },
 ];
 
 function typeTerminal() {
@@ -245,7 +243,7 @@ function typeTerminal() {
   function nextRow() {
     if (currentRow >= grid.length) {
       html +=
-        '<div><span class="t-green">danil@irkutsk</span><span class="t-dim">:~$</span> <span class="terminal__cursor"></span></div>';
+        '<div><span class="t-green">danil@bsu</span><span class="t-dim">:~$</span> <span class="terminal__cursor"></span></div>';
       terminalBody.innerHTML = html;
       return;
     }
@@ -264,14 +262,14 @@ function typeTerminal() {
   }
 
   const intro = "$ neofetch\n";
-  html = '<div><span class="t-green">danil@irkutsk</span><span class="t-dim">:~$</span> neofetch</div>';
+  html = '<div><span class="t-green">danil@bsu</span><span class="t-dim">:~$</span> cat resume.txt</div>';
   terminalBody.innerHTML = html;
   setTimeout(nextRow, 500);
 }
 
 const terminalWindow = document.getElementById("terminal-window");
 
-if (terminalWindow && !document.querySelector("script[src*='resume.js']")) {
+if (terminalWindow) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {

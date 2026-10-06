@@ -408,6 +408,7 @@ function initTerminalShell() {
         const echo = document.createElement("span");
         echo.textContent = " " + value;
         promptLine.appendChild(echo);
+        inp.remove();
         promptLine.querySelector(".terminal__cursor")?.remove();
         if (value.trim()) {
           history.unshift(value);

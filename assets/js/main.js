@@ -276,7 +276,7 @@ const NEOFETCH_LINES = [
   { text: "Packages: 40+ repo · копирайтинг · SMM", cls: "", delay: 130 },
   { text: "Shell: сцена · импровизация · презентации", cls: "", delay: 130 },
   { text: "Languages: русский · English B2+ · français", cls: "", delay: 130 },
-  { text: "Цель: команда БГУ на «ЯрпИР» и «Лучник»", cls: "t-green", delay: 130 },
+  { text: "Цель: научная коммуникация · digital-проекты", cls: "t-green", delay: 130 },
 ];
 
 function typeTerminal() {
